@@ -21,8 +21,16 @@ module.exports = {
         generator: {
           filename: 'assets/img/[hash][ext]'
         }
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'assets/js/[name].[contenthash:6].js',
