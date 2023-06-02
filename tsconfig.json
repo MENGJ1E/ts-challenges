@@ -4,15 +4,27 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ESNext",
     "target": "es5",
     "jsx": "react",
+    "strict": false,
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports" : true,
-    "esModuleInterop" : true
+    "baseUrl": "./", // 定义一个目录 在引入模块的时候使用./会从tsconfig.json 处于相同目录的文件开始找。
+    "paths": {
+      "src/*": ["src/*"],
+      
+    }
   },
   "exclude": [
       "node_modules"
-  ]
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
 }
