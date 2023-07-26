@@ -4,11 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "webpack server --mode=development",
+    "dev": "webpack server --mode=development --open",
     "build": "webpack --mode=production"
   },
   "dependencies": {
     "pinia": "^2.0.36",
+    "qiankun": "^2.10.8",
     "vue": "^3.2.36",
     "vue-router": "^4.2.0"
   },
